@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+  </script>
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+
+  </script>
+  <title>Web tejima AR for gallery</title>
+  <style>
+  h1 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .ar-model {
+    margin: 0 auto;
+    max-width: 600px;
+    height: 400px;
+  }
+  .ar-caption {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+  .ar-text {
+    padding: 0 1rem;
+  }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>yuki tajima web AR</h1>
+  <figure class="ar-img">
+    <model-viewer class="ar-model" poster="img/tejimapreview.png" src="img/tejimaworks01.gltf" ios-src="img/tejimaworks01apple.usdz" auto-rotate camera-controls ar alt="作品"></model-viewer>
+    <figcaption class="ar-caption">&copy; tejimaworks</figcaption>
+  </figure>
+  <p class="ar-text">tejima works のテストサイトです．
+    <br>iphone:safari Android:AR core対応端末で使用できます．</br> 
+  </p>
+</div>
+</body>
+</html>
